@@ -5,7 +5,3 @@ const URI = "mongodb+srv://juliangcaires:hkMQD2uwBnagxxHH@cluster0.88hjznq.mongo
 const client = new MongoClient(URI);
 
 export const db = client.db('spotifyAula');
-
-// const songCollection = await db.collection('songs').find({}).toArray();
-
-// console.log(songCollection)
