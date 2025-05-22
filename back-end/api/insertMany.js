@@ -16,8 +16,12 @@ const newSongsArray = songsArray.map((currentSongObj) => {
     return newSongObj;
 })
 
-const responseSongs = await db.collection('songs').insertMany(newSongsArray)
-const responseArtists = await db.collection('artists').insertMany(newArtistArray)
+async function seedDatabase() {
+    const responseSongs = await db.collection("songs").insertMany(newSongsArray);
+    const responseArtists = await db.collection("artists").insertMany(newArtistArray);
 
-console.log(responseSongs)
-console.log(responseArtists)
+    console.log("Songs:", responseSongs);
+    console.log("Artists:", responseArtists);
+}
+
+seedDatabase();
